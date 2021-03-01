@@ -9,5 +9,142 @@
       or implied. See the License for the specific language governing permissions and limitations under
       the License.
       -->
-    <string name="app_name">AndroidDevChallenge</string>
+    <string name="app_name">Puppy Adoption</string>
+
+    <string name="app_bar_title">Puppy\nAdoption</string>
+
+    <string name="cat_breed_header">Breed</string>
+
+    <string name="cat_gender_subtitle">Gender</string>
+    <string name="cat_hair_color_subtitle">Hair Color</string>
+    <string name="cat_eye_color_subtitle">Eye Color</string>
+    <string name="cat_age_subtitle">Age</string>
+
+    <string name="cat_adopt_button_name">Adopt</string>
+
+    <string name="cat_name_lulu">Lulu</string>
+    <string name="cat_name_lala">Lala</string>
+    <string name="cat_name_dd">DD</string>
+    <string name="cat_name_tt">TT</string>
+    <string name="cat_name_chuchu">Chuchu</string>
+    <string name="cat_name_coco">Coco</string>
+    <string name="cat_name_momo">Momo</string>
+
+    <string name="cat_dob_lulu">Jan 11, 2017</string>
+    <string name="cat_dob_lala">Dec 6, 2017</string>
+    <string name="cat_dob_dd">Jan 15, 2015</string>
+    <string name="cat_dob_tt">Jan 15, 2015</string>
+    <string name="cat_dob_chuchu">Dec 25, 2016</string>
+    <string name="cat_dob_coco">Oct 29, 2016</string>
+    <string name="cat_dob_momo">Oct 27, 2016</string>
+
+    <string name="cat_gender_male">Male</string>
+    <string name="cat_gender_female">Male</string>
+
+    <string name="cat_description_lulu"><![CDATA[I\'ll be happy & brave cat.]]></string>
+    <string name="cat_description_lala">The pretty troublemaker cat.</string>
+    <string name="cat_description_dd">Fluffy, chattering, friendly and likes bread.</string>
+    <string name="cat_description_tt">The beautiful and Has a Wonderful Meow.</string>
+    <string name="cat_description_chuchu">The innocent baby princess.</string>
+    <string name="cat_description_coco">The cool, curious, collected handsome doctor cat.</string>
+    <string name="cat_description_momo">The iconic Amazing One and only orange chairman.</string>
+
+    <string name="cat_breed_lulu">Munchkin, British ShortHair</string>
+    <string name="cat_breed_lala">Long hair Napoleon Munchkin</string>
+    <string name="cat_breed_dd">Norwegian Forest</string>
+    <string name="cat_breed_tt">American + European ShortHair</string>
+    <string name="cat_breed_chuchu">Scottish Fold/Persian Mix</string>
+    <string name="cat_breed_coco">Scottish Highland Straight</string>
+    <string name="cat_breed_momo">Exotic ShortHair and Tabby</string>
+
+    <string name="cat_about_lulu">
+        Lulu is a brown-coated cat with a white muzzle. He has yellow-golden eyes. If you look
+        closely, you can see he has an M forehead mark. He has dark-colored paws and unlike the
+        other cats, he has a bushy raccoon-shaped tail.
+        He is one of the most mischievous, if not THE most mischievous one of all. He is a glutton,
+        lunging for whatever treats he can find. He is always very hungry, often meowing loud to ask
+        for treats. He often kicks out the other cats out of their comfortable spots.
+        He often bites toys intensely during games, mostly dragonfly toys which are hard to pull
+        free since Lulu has sharp canines. Although Lulu likes to eat, he refuses to eat meals that
+        look scary, like a big prawn or an octopus. Lulu often takes great pride to pick fights with
+        other cats in any case, often ending with other cats and him fighting.
+    </string>
+
+    <string name="cat_about_lala">
+        Lala is an Napoleon Munchkin cat with a long white fur coat. Lala has bright blue eyes and
+        a black blotch on her nose and like a Munchkin, she has short legs.
+        She is hungry most of the time and even runs to quickly get the food. She also hates to be
+        bathed, always trying to run away and meowing very loudly. Lala is a big fan of the cat
+        wheel, she is very athletic and goes very fast on the wheel.
+        Lala can jump the highest out of all the cats, around 2-3 meters.
+        Lala panics the most when bathed. Lala tail is 32cm long.
+    </string>
+
+    <string name="cat_about_dd">
+        DD is a Norwegian Forest Cat and he likes bread. He is very friendly and gentle as well as
+        the fluffiest cat. He has long, creamy brown and white fur. He has bright yellow eyes. Due
+        to such a huge coat of fur, many people may think that he is fat, he is actually quite slim.
+        DD is very fond of boxes. He also loves pushing things off tables and counter tops such as
+        bread. He is the only one who knows how to open cupboards and drawers. Despite being calm
+        most of the time, DD can lose his patience. DD meow is a soft chatter. He hisses at any
+        machine or toy which looks like a cat.
+    </string>
+
+    <string name="cat_about_tt">
+        TT is an American Shorthair cat. She is one of the more territorial cats. TT is a tall,
+        queenly cat with short, greyish-silver fur and sad olive-green eyes. She also has dark grey
+        markings across her fur, which is seen on her head as well. She has a yellow spot on top of
+        her nose. TT has a scar on her right eye due to having Feline Herpes when she was kitten,
+        which is why the eye appears cloudy. As a kitten, TT was very skinny with a black pattern
+        across the bridge of her nose, which indicated how very sick she was. She is very sensitive.
+        TT can understand human language and she is very patient as well. She is also a very
+        well-mannered lady and waits for her food. She also gets upset easily when she sees unknown
+        people or animals. She is a big fan of the cat wheel.
+    </string>
+
+    <string name="cat_about_chuchu">
+        Chuchu is a tri-colored Highland Fold. Chuchu is a fluffy longhaired cat with a tri-colored
+        calico coat. She has bright yellow eyes with dark pupils. She also has a slightly smushed
+        appearance to her face. She has a few dark brown, thin stripes on her forehead, small,
+        folded ears and has a short, fluffy tail. She is also tall. She overall has more of a white
+        fur color. She has an "M" on her forehead. Chuchu is the most timid cat. She has a very
+        innocent behavior. Chuchu usually prefers to just sit around, does not take part in most
+        of the games, and is very calm, though she can get frightened easily. As Chuchu grows older,
+        she starts becoming more active and playful. Chuchu does care for everyone around her, as
+        seen with her meek behavior.
+    </string>
+
+    <string name="cat_about_coco">
+        Coco is a white-coated Highland Straight. Coco has white colored fur with big sky blue eyes.
+        He has fluffy fur and a fluffy tail. Coco usually appears to be very calm, but in the past
+        he was a mischievous cat. Coco dislikes food with strange smells and even makes a face when
+        strange food is moved closer to him. Coco is not vocal at all as he meows only few times.
+        He is the most timid cat, as he easily gets nervous and uncomfortable when he is taken to a
+        vet. Coco hates the camera for unclear reasons. His pupils would swell up when the camera is
+        brought near to him and he even punches it before running away. Coco grew up to be a
+        trouble-making and naughty teenager. However, with time, Coco lost his mischievous
+        personality and became calm and nice.
+    </string>
+
+    <string name="cat_about_momo">
+        Momo is a Garfield-faced Exotic Shorthair. His name also means peaches in Japanese. Momo
+        has ginger/orange fur and yellowish eyes. His face look a bit grumpy when seen closely. He
+        is also very tall and long. He is rather stocky built, with a roundish face. He loves
+        playing with toys and shows dislike being groomed by others. Momo is a very mischievous cat,
+        but he mellowed out as he got older. He is very soft and when receiving an injection in a
+        cat hospital, he could easily slip away and needed to be held tightly without escaping. He
+        is also very tall and long, as seen when he was stretched during an X-ray at the hospital.
+        He also feels uncomfortable when getting his claws trimmed. He seems to have a good sense of
+        balance and athleticism, as he is shown to leap high. Momo thinks too much before doing
+        something in the games arranged for the cats, getting confused to the point that he even
+        stops what he is doing.
+    </string>
+
+    <string name="content_desc_app_icon">Icon of the app</string>
+    <string name="content_desc_row_cat_image">Picture of the cat.</string>
+    <string name="content_desc_expand_cat_row_desc">Expand description of the cat.</string>
+    <string name="content_desc_cat_detail_image">Banner of the cat.</string>
+    <string name="content_desc_up_navigate_detail">Go back to cats list screen.</string>
+    <string name="content_desc_cat_gender_picture">Picture which shows gender of the cat.</string>
+    <string name="content_desc_picture_paw_puppy">Paw picture of the puppy.</string>
 </resources>

@@ -43,6 +43,11 @@ Light Theme
 App follows complete material theme and uses grey color.
 <img src="/results/grey_palette.png">
 
+## Images and Content
+
+Cat and images belongs to and taken from [Fandom](https://www.fandom.com/) . I do not own the
+images.
+
 ## License
 
 ```

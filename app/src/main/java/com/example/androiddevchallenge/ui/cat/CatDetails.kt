@@ -159,6 +159,7 @@ private fun GenderInfo(
     ) {
         Card(
             Modifier.clip(CircleShape),
+            backgroundColor = MaterialTheme.colors.background
         ) {
             Image(
                 painter = findCatGenderAndPaint(gender),
@@ -198,6 +199,7 @@ private fun AgeInfo(
     ) {
         Card(
             Modifier.clip(CircleShape),
+            backgroundColor = MaterialTheme.colors.background
         ) {
             Text(
                 text = catAge.toString(),
@@ -233,6 +235,7 @@ private fun CatDetailBody(
 
     Card(
         shape = MaterialTheme.shapes.medium,
+        backgroundColor = MaterialTheme.colors.background,
         modifier = Modifier
             .padding(8.dp)
             .animateContentSize()
@@ -310,6 +313,7 @@ private fun CatDetailAbout(
 
     Card(
         shape = MaterialTheme.shapes.medium,
+        backgroundColor = MaterialTheme.colors.background,
         modifier = Modifier
             .fillMaxWidth()
             .padding(8.dp)
@@ -328,7 +332,7 @@ private fun CatDetailAbout(
                     modifier = Modifier
                         .padding(8.dp)
                         .size(32.dp),
-                    colorFilter = ColorFilter.tint(cat.catHairColor)
+                    colorFilter = ColorFilter.tint(cat.catEyeColor)
                 )
 
                 Text(
@@ -377,7 +381,6 @@ private fun CatAdoptButton(catName: String) {
         Text(
             text = stringResource(R.string.cat_adopt_button_name).plus(" ").plus(catName),
             style = MaterialTheme.typography.h6,
-            color = MaterialTheme.colors.onSecondary
         )
     }
 }
@@ -389,11 +392,12 @@ private fun CircularCanvasCatInfoHeader(
 ) {
     Card(
         Modifier.clip(CircleShape),
+        backgroundColor = MaterialTheme.colors.background
     ) {
         Canvas(
             modifier = Modifier
                 .padding(16.dp)
-                .size(32.dp)
+                .size(32.dp),
         ) {
             val canvasWidth = size.width
             val canvasHeight = size.height

@@ -52,8 +52,9 @@ fun AppNavigation(
     }
 }
 
-class AppActions(navController: NavHostController) {
-
+class AppActions(
+    navController: NavHostController
+) {
     val selectedCat: (Int) -> Unit = { catId: Int ->
         navController.navigate("${AppDestinations.CAT_DETAIL_ROUTE}/$catId")
     }

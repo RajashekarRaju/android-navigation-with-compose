@@ -17,11 +17,11 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val black200 = Color(0xFFA0A0A0)
-val black300 = Color(0xFF7A7A7A)
-val black700 = Color(0xFF575757)
-val black800 = Color(0xFF313131)
-val black900 = Color(0xFF1B1B1B)
+val grey100 = Color(0xFFf5f5f5)
+val grey300 = Color(0xFFe0e0e0)
+val grey500 = Color(0xFF9e9e9e)
+val grey700 = Color(0xFF616161)
+val grey900 = Color(0xFF212121)
 
 val LuluHairColor = Color(0xff93775E)
 val DdHairColor = Color(0xffc3b19a)
@@ -36,7 +36,7 @@ val DdEyeColor = Color(0xff99835b)
 val LalaEyeColor = Color(0xff858a99)
 val TtEyeColor = Color(0xff726650)
 val ChuchuEyeColor = Color(0xff706033)
-val CocoEyeColor = Color(0xffffffff)
+val CocoEyeColor = Color(0xFFECECEC)
 val MomoEyeColor = Color(0xff4c2a19)
 
 val CatCompanionColor = Color(0xff121212)

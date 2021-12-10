@@ -1,21 +1,5 @@
-/*
- * Copyright 2021 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-package com.example.androiddevchallenge.ui.cat
+package com.developersbreach.cutepuppies.ui.cat
 
-import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.animateContentSize
@@ -23,35 +7,14 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.Card
-import androidx.compose.material.Divider
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ArrowBack
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -66,16 +29,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.data.PuppyAdoptionRepo
-import com.example.androiddevchallenge.model.Cats
-import com.example.androiddevchallenge.ui.cats.getIconState
-import com.example.androiddevchallenge.ui.theme.PuppyAdoptionTheme
-import dev.chrisbanes.accompanist.insets.navigationBarsPadding
-import dev.chrisbanes.accompanist.insets.statusBarsPadding
+import com.developersbreach.cutepuppies.R
+import com.developersbreach.cutepuppies.data.PuppyRepo
+import com.developersbreach.cutepuppies.model.Cats
+import com.developersbreach.cutepuppies.ui.cats.getIconState
+import com.developersbreach.cutepuppies.ui.theme.PuppyTheme
+
 
 // Start of the Detail screen for each cat.
-@ExperimentalAnimationApi
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun CatDetails(
     catId: Int,
@@ -84,22 +46,23 @@ fun CatDetails(
     val context = LocalContext.current
 
     val cat: Cats = remember(catId) {
-        PuppyAdoptionRepo.getCat(
+        PuppyRepo.getCat(
             catId, context
         )
     }
 
     AnimatedVisibility(
-        initiallyVisible = false,
         visible = true,
-        enter = expandVertically(expandFrom = Alignment.Top, initialHeight = { 0 })
+        enter = expandVertically(
+            expandFrom = Alignment.Top,
+            initialHeight = { 0 }
+        )
     ) {
         SetCatDetails(cat, navigateUp)
     }
 }
 
 // This UI starts with AnimatedVisibility
-@ExperimentalAnimationApi
 @Composable
 private fun SetCatDetails(
     cat: Cats,
@@ -109,14 +72,12 @@ private fun SetCatDetails(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .navigationBarsPadding(),
         ) {
             LazyColumn {
                 item { CatHeader(cat.catImage, navigateUp) }
                 item { CatInfoHeader(cat) }
                 item { CatDetailBody(cat) }
                 item { CatDetailAbout(cat) }
-                item { CatAdoptButton(catName = cat.catName) }
             }
         }
     }
@@ -140,8 +101,7 @@ private fun CatHeader(
         TopAppBar(
             backgroundColor = Color.Transparent,
             elevation = 0.dp,
-            contentColor = Color.White,
-            modifier = Modifier.statusBarsPadding()
+            contentColor = Color.White
         ) {
             IconButton(onClick = navigateUp) {
                 Icon(
@@ -261,7 +221,7 @@ private fun HeaderInfoDivider() {
 // Animates rest of the contents on clicking the button icon.
 // Save state with remember and change current icon state.
 // Card -> Column -> Row -> Boxes(weight 8.5f and 1.5f)
-@ExperimentalAnimationApi
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 private fun CatDetailBody(
     cat: Cats
@@ -339,7 +299,7 @@ private fun CatDetailBody(
 // Initially shows image title and subtitle.
 // Animates rest of the contents on clicking the button icon.
 // Card -> Column -> Row -> Child's
-@ExperimentalAnimationApi
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 private fun CatDetailAbout(
     cat: Cats
@@ -399,27 +359,6 @@ private fun CatDetailAbout(
     }
 }
 
-// Button for adopting the cat.
-@Composable
-private fun CatAdoptButton(catName: String) {
-
-    val context = LocalContext.current
-
-    Button(
-        onClick = { Toast.makeText(context, catName, Toast.LENGTH_LONG).show() },
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 48.dp, vertical = 8.dp),
-        shape = MaterialTheme.shapes.large,
-        colors = ButtonDefaults.buttonColors(MaterialTheme.colors.secondary)
-    ) {
-        Text(
-            text = stringResource(R.string.cat_adopt_button_name).plus(" ").plus(catName),
-            style = MaterialTheme.typography.h6,
-        )
-    }
-}
-
 // Reusable composable for two lazy row items shows canvas
 @Composable
 private fun CircularCanvasCatInfoHeader(
@@ -467,20 +406,18 @@ private fun findCatGenderAndPaint(
     painterResource(id = R.drawable.ic_female)
 }
 
-@ExperimentalAnimationApi
 @Preview("Detail Light Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun DetailLightPreview() {
-    PuppyAdoptionTheme {
+    PuppyTheme(darkTheme = false) {
         CatDetails(catId = 1, navigateUp = { })
     }
 }
 
-@ExperimentalAnimationApi
 @Preview("Detail Dark Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun DetailDarkPreview() {
-    PuppyAdoptionTheme(darkTheme = true) {
+    PuppyTheme(darkTheme = true) {
         CatDetails(catId = 1, navigateUp = { })
     }
 }

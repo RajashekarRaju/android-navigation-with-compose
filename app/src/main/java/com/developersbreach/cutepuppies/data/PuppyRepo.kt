@@ -1,39 +1,24 @@
-/*
- * Copyright 2021 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-package com.example.androiddevchallenge.data
+package com.developersbreach.cutepuppies.data
 
 import android.content.Context
-import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.model.Cats
-import com.example.androiddevchallenge.ui.theme.ChuchuEyeColor
-import com.example.androiddevchallenge.ui.theme.ChuchuHairColor
-import com.example.androiddevchallenge.ui.theme.CocoEyeColor
-import com.example.androiddevchallenge.ui.theme.CocoHairColor
-import com.example.androiddevchallenge.ui.theme.DdEyeColor
-import com.example.androiddevchallenge.ui.theme.DdHairColor
-import com.example.androiddevchallenge.ui.theme.LalaEyeColor
-import com.example.androiddevchallenge.ui.theme.LalaHairColor
-import com.example.androiddevchallenge.ui.theme.LuluEyeColor
-import com.example.androiddevchallenge.ui.theme.LuluHairColor
-import com.example.androiddevchallenge.ui.theme.MomoEyeColor
-import com.example.androiddevchallenge.ui.theme.MomoHairColor
-import com.example.androiddevchallenge.ui.theme.TtEyeColor
-import com.example.androiddevchallenge.ui.theme.TtHairColor
+import com.developersbreach.cutepuppies.R
+import com.developersbreach.cutepuppies.model.Cats
+import com.developersbreach.cutepuppies.ui.theme.ChuchuEyeColor
+import com.developersbreach.cutepuppies.ui.theme.ChuchuHairColor
+import com.developersbreach.cutepuppies.ui.theme.CocoEyeColor
+import com.developersbreach.cutepuppies.ui.theme.CocoHairColor
+import com.developersbreach.cutepuppies.ui.theme.DdEyeColor
+import com.developersbreach.cutepuppies.ui.theme.DdHairColor
+import com.developersbreach.cutepuppies.ui.theme.LalaEyeColor
+import com.developersbreach.cutepuppies.ui.theme.LalaHairColor
+import com.developersbreach.cutepuppies.ui.theme.LuluEyeColor
+import com.developersbreach.cutepuppies.ui.theme.LuluHairColor
+import com.developersbreach.cutepuppies.ui.theme.MomoEyeColor
+import com.developersbreach.cutepuppies.ui.theme.MomoHairColor
+import com.developersbreach.cutepuppies.ui.theme.TtEyeColor
+import com.developersbreach.cutepuppies.ui.theme.TtHairColor
 
-object PuppyAdoptionRepo {
+object PuppyRepo {
 
     fun getCat(
         catId: Int,

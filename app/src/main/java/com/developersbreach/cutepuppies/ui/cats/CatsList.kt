@@ -1,19 +1,4 @@
-/*
- * Copyright 2021 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-package com.example.androiddevchallenge.ui.cats
+package com.developersbreach.cutepuppies.ui.cats
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExperimentalAnimationApi
@@ -55,17 +40,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.data.PuppyAdoptionRepo
-import com.example.androiddevchallenge.model.Cats
-import com.example.androiddevchallenge.ui.theme.CatCompanionColor
-import com.example.androiddevchallenge.ui.theme.PuppyAdoptionTheme
-import com.example.androiddevchallenge.utils.gradientWidth
-import com.example.androiddevchallenge.utils.offsetGradientBackground
-import dev.chrisbanes.accompanist.insets.statusBarsPadding
+import com.developersbreach.cutepuppies.R
+import com.developersbreach.cutepuppies.data.PuppyRepo
+import com.developersbreach.cutepuppies.model.Cats
+import com.developersbreach.cutepuppies.ui.theme.CatCompanionColor
+import com.developersbreach.cutepuppies.ui.theme.PuppyTheme
+import com.developersbreach.cutepuppies.utils.gradientWidth
+import com.developersbreach.cutepuppies.utils.offsetGradientBackground
+
 
 // Start of the CatsList UI
-@ExperimentalAnimationApi
 @Composable
 fun CatsList(
     selectedCat: (Int) -> Unit
@@ -74,19 +58,17 @@ fun CatsList(
         topBar = {
             Row {
                 Image(
-                    painter = painterResource(id = R.drawable.ic_puppy_adoption_icon),
+                    painter = painterResource(id = R.drawable.ic_puppy_icon),
                     contentDescription = stringResource(R.string.content_desc_app_icon),
                     modifier = Modifier
-                        .size(112.dp)
+                        .size(88.dp)
                         .padding(top = 16.dp)
-                        .statusBarsPadding(),
                 )
                 Text(
                     text = stringResource(id = R.string.app_bar_title),
                     style = MaterialTheme.typography.h3,
                     modifier = Modifier
-                        .padding(vertical = 8.dp)
-                        .statusBarsPadding()
+                        .padding(8.dp)
                 )
             }
         }
@@ -96,7 +78,6 @@ fun CatsList(
 }
 
 // Start of List
-@ExperimentalAnimationApi
 @Composable
 private fun CatsListBody(
     selectedCat: (Int) -> Unit
@@ -104,7 +85,7 @@ private fun CatsListBody(
     // Save the scroll state of cats list
     val scrollState = rememberLazyListState()
     val context = LocalContext.current
-    val cats: List<Cats> = PuppyAdoptionRepo.getCatsList(context)
+    val cats: List<Cats> = PuppyRepo.getCatsList(context)
 
     LazyRow(
         horizontalArrangement = Arrangement.spacedBy(20.dp),
@@ -121,7 +102,7 @@ private fun CatsListBody(
 }
 
 // Item row for one cat.
-@ExperimentalAnimationApi
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 private fun CatRow(
     cat: Cats,
@@ -147,7 +128,7 @@ private fun CatRow(
         ) {
 
             AnimatedVisibility(
-                initiallyVisible = false, visible = true
+                visible = true
             ) {
                 Image(
                     painter = painterResource(id = cat.catImage),
@@ -203,20 +184,18 @@ fun getIconState(
     R.drawable.ic_arrow_down
 }
 
-@ExperimentalAnimationApi
 @Preview("List Dark Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun ListDarkPreview() {
-    PuppyAdoptionTheme(darkTheme = true) {
+    PuppyTheme(darkTheme = true) {
         CatsList(selectedCat = { })
     }
 }
 
-@ExperimentalAnimationApi
 @Preview("List Light Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun ListLightPreview() {
-    PuppyAdoptionTheme {
+    PuppyTheme(darkTheme = false) {
         CatsList(selectedCat = { })
     }
 }

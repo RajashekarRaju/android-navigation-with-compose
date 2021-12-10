@@ -1,4 +1,4 @@
-# Puppy Adoption App
+# Cute Puppies
 
 ![Workflow result](https://github.com/RajashekarRaju/android-dev-challenge-compose-one/workflows/Check/badge.svg)
 

@@ -1,7 +1,5 @@
 # Cute Puppies
 
-![Workflow result](https://github.com/RajashekarRaju/android-dev-challenge-compose-one/workflows/Check/badge.svg)
-
 ## :scroll: Description
 
 Android app built with `Jetpack Compose`. This app contains an overview screen that displays a list
@@ -10,7 +8,9 @@ of cats, and a detail screen showing each cat's details.
 `Jetpack Compose` is Android’s modern toolkit for building native UI. It enables you to quickly
 bring your app to life with less code, powerful tools, and intuitive Kotlin APIs.
 
-This app is build for submitting first week #AndroidDevChallenge.
+## :pencil: Blog
+
+Refer to this [Article](https://developersbreach.com/list-detail-navigation-compose/) for clear demonstration on implementing naviation flow with compose in android.
 
 ## :bulb: Motivation and Context
 
@@ -26,22 +26,15 @@ referring to lot of official jetpack compose samples which are available in GitH
 
 Best of all we got to do this in `Kotlin` way. Excited and long way to go from here.
 
-![Alt Text](/results/anim_preview.gif)
-
 ## :camera_flash: Screenshots
 
-Dark Theme
+### Dark Theme
 
-<img src="/results/screenshot_1.png" width="260">
-&emsp;<img src="/results/screenshot_2.png" width="260">
+<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
 
-Light Theme
+### Light Theme
 
-<img src="/results/screenshot_light_1.png" width="260">
-&emsp;<img src="/results/screenshot_light_2.png" width="260">
-
-App follows complete material theme and uses grey color.
-<img src="/results/grey_palette.png">
+<img src="/results/screenshot_light_1.png" width="260">&emsp;<img src="/results/screenshot_light_2.png" width="260">
 
 ## Images and Content
 
@@ -51,7 +44,7 @@ images.
 ## License
 
 ```
-Copyright 2020 The Android Open Source Project
+Copyright 2021 Rajasekhar K E
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

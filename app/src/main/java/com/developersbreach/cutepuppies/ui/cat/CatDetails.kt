@@ -1,7 +1,6 @@
 package com.developersbreach.cutepuppies.ui.cat
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.expandVertically
 import androidx.compose.foundation.Canvas
@@ -56,7 +55,6 @@ import com.developersbreach.cutepuppies.ui.theme.PuppyTheme
 
 
 // Start of the Detail screen for each cat.
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun CatDetails(
     catId: Int,
@@ -240,7 +238,6 @@ private fun HeaderInfoDivider() {
 // Animates rest of the contents on clicking the button icon.
 // Save state with remember and change current icon state.
 // Card -> Column -> Row -> Boxes(weight 8.5f and 1.5f)
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 private fun CatDetailBody(
     cat: Cats
@@ -318,7 +315,6 @@ private fun CatDetailBody(
 // Initially shows image title and subtitle.
 // Animates rest of the contents on clicking the button icon.
 // Card -> Column -> Row -> Child's
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 private fun CatDetailAbout(
     cat: Cats
